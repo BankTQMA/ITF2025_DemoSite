@@ -1,0 +1,29 @@
+nav {
+    background-color: #101010;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    background-color: #202020;
+    color: white;
+    margin: 0;
+    font-family: Roboto;
+}
+
+div {
+    margin-top: 10px;
+    display: flex;
+    justify-self: center;
+}
+
+input {
+    background-color: #303030;
+    color: white;
+}
+
+button {
+    background-color: #303030;
+    color: white;
+}
