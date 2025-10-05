@@ -50,16 +50,42 @@
       <div class="content">
         <h1 class="header1">Transaction Logs</h1>
         <div class="textarea-wrapper">
-          <textarea class="defaultTextArea" disabled></textarea>
+          <textarea
+            disabled
+            id="transactionLog"
+            class="defaultTextArea"
+          ></textarea>
         </div>
       </div>
     </div>
     <hr />
     <h1 class="header1">Transaction</h1>
-    <div>
-      <input type="number" id="myInput" value="0" />
-      <button onclick="plus()">+1</button>
-      <button onclick="minus()">-1</button>
+    <h2 class="header2">Balance Information</h2>
+    <div class="inline-container">
+      <p class="paragraph">Account Balance</p>
+      <input type="number" id="accountBalance" value="0" />
+    </div>
+    <div class="inline-container">
+      <p class="paragraph">Cash Balance</p>
+      <input type="number" id="cashBalance" value="0" />
+    </div>
+    <div class="inline-container">
+      <button class="largeButton" onclick="updateBalance('CHANGE')">
+        UPDATE
+      </button>
+    </div>
+    <h2 class="header2">Bank Operation</h2>
+    <div class="inline-container">
+      <input type="number" id="operationBalance" value="0" />
+      <select id="operationMode">
+        <option value="DEPOSIT">Deposit</option>
+        <option value="WITHDRAW">Withdraw</option>
+      </select>
+    </div>
+    <div class="inline-container">
+      <button class="largeButton" onclick="updateBalance('TRANSACTION')">
+        PROCEED
+      </button>
     </div>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
