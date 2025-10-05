@@ -1,25 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ITF2025 Demo</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <nav>
-        <p>68070053</p>
-        <h3>ITF Website</h2>
-        <h3>Week 14</h3>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="default-nav">
+      <h3 style="margin: 20px">68070053</h3>
+      <h3>ITF Website</h3>
+      <h3 style="margin: 20px" id="clock">00:00:00</h3>
+      <script>
+        function updateClock() {
+          const now = dayjs();
+          const formatted = now.format("dddd DD MMMM YYYY, hh:mm:ss A");
+          // e.g. "Sunday 01 October 2025, 08:07:03 PM"
+          document.getElementById("clock").textContent = formatted;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+      </script>
     </nav>
-    <div>
-        <input type="number" id="myInput" value="0">
-        <button onclick="plus()">+1</button>
-        <button onclick="minus()">-1</button>
-        <script src="script.js"></script>
+    <div class="container">
+      <div class="content">
+        <h1 class="header1">Account Overview</h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="300"
+          height="200"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"
+          />
+        </svg>
+        <h1>Therdsak Chen</h1>
+        <h2>( Saving Account )</h2>
+        <p>Faculty of Information Technology</p>
+        <p>King Mongkut's Institute of Technology Ladkrabang</p>
+      </div>
+      <div class="content">
+        <h1 class="header1">Transaction Logs</h1>
+        <div class="textarea-wrapper">
+          <textarea class="defaultTextArea" disabled></textarea>
+        </div>
+      </div>
     </div>
-</body>
+    <hr />
+    <h1 class="header1">Transaction</h1>
+    <div>
+      <input type="number" id="myInput" value="0" />
+      <button onclick="plus()">+1</button>
+      <button onclick="minus()">-1</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/timezone.js"></script>
+  </body>
 </html>
