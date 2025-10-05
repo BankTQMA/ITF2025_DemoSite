@@ -57,35 +57,53 @@
           ></textarea>
         </div>
       </div>
-    </div>
-    <hr />
-    <h1 class="header1">Transaction</h1>
-    <h2 class="header2">Balance Information</h2>
-    <div class="inline-container">
-      <p class="paragraph">Account Balance</p>
-      <input type="number" id="accountBalance" value="0" />
-    </div>
-    <div class="inline-container">
-      <p class="paragraph">Cash Balance</p>
-      <input type="number" id="cashBalance" value="0" />
-    </div>
-    <div class="inline-container">
-      <button class="largeButton" onclick="updateBalance('CHANGE')">
-        UPDATE
-      </button>
-    </div>
-    <h2 class="header2">Bank Operation</h2>
-    <div class="inline-container">
-      <input type="number" id="operationBalance" value="0" />
-      <select id="operationMode">
-        <option value="DEPOSIT">Deposit</option>
-        <option value="WITHDRAW">Withdraw</option>
-      </select>
-    </div>
-    <div class="inline-container">
-      <button class="largeButton" onclick="updateBalance('TRANSACTION')">
-        PROCEED
-      </button>
+      <div class="content">
+        <h1 class="header1">Transaction</h1>
+        <h2 class="header2">Balance Information</h2>
+        <div class="inline-container">
+          <p class="paragraph">Account Balance</p>
+          <input type="number" id="accountBalance" value="0" />
+        </div>
+        <div class="inline-container">
+          <p class="paragraph">Cash Balance</p>
+          <input type="number" id="cashBalance" value="0" />
+        </div>
+        <div class="inline-container">
+          <button class="largeButton" onclick="updateBalance('CHANGE')">
+            UPDATE
+          </button>
+        </div>
+        <h2 class="header2" style="margin-top: 50px">Bank Operation</h2>
+        <div class="inline-container">
+          <input type="number" id="operationBalance" value="0" />
+          <select id="operationMode">
+            <option value="DEPOSIT">Deposit</option>
+            <option value="WITHDRAW">Withdraw</option>
+          </select>
+        </div>
+        <div class="inline-container">
+          <button class="largeButton" onclick="updateBalance('TRANSACTION')">
+            PROCEED
+          </button>
+        </div>
+        <h2 class="header2" style="margin-top: 50px">Currency Converter</h2>
+        <div class="inline-container">
+          <p class="paragraph">Input Balance:</p>
+          <input type="number" />
+        </div>
+        <div class="inline-container">
+          <p class="paragraph">Output Balance:</p>
+          <input type="number" disabled />
+        </div>
+        <div class="inline-container">
+          <p class="paragraph">Input Currency:</p>
+          <select>
+            <option value="USD">USD</option>
+            <option value="THB">THB</option>
+          </select>
+          <button disabled>Convert</button>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>

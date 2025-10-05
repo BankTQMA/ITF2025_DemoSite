@@ -41,7 +41,7 @@ body {
 
 .defaultTextArea {
     display: inline-block;
-    height: 500px;
+    height: 930px;
     width: 90%;
     max-width: 1200px;
     background-color: #202020;
@@ -57,7 +57,7 @@ body {
 .container {
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 20px;
     background: #262626;
