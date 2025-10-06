@@ -8,7 +8,10 @@
 
 .kokage {
     max-width: 50%;
-    max-height: 50%;
+}
+
+.tsuuna {
+    max-width: 40%;
 }
 
 body {
