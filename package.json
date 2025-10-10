@@ -1,0 +1,24 @@
+{
+  "name": "itf2025_demosite",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BankTQMA/ITF2025_DemoSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BankTQMA/ITF2025_DemoSite/issues"
+  },
+  "homepage": "https://github.com/BankTQMA/ITF2025_DemoSite#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
